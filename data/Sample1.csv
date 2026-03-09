@@ -1,0 +1,101 @@
+id,title,expense_description,amount,category,expense_date
+1,Breakfast,Bread and eggs,120,Food,2024-01-01
+2,Bus Ticket,Office commute,40,Transport,2024-01-01
+3,Coffee,Evening coffee,80,Food,2024-01-01
+4,Groceries,Vegetables purchase,560,Food,2024-01-02
+5,Movie Ticket,Weekend movie,350,Fun,2024-01-02
+6,Petrol,Fuel refill,1500,Transport,2024-01-02
+7,Lunch,Office lunch,220,Food,2024-01-03
+8,Snacks,Chips and juice,90,Food,2024-01-03
+9,Uber Ride,Airport drop,450,Transport,2024-01-03
+10,Internet Bill,Monthly wifi,999,Bills,2024-01-04
+11,Electricity Bill,Monthly bill,2100,Bills,2024-01-04
+12,Dinner,Restaurant dinner,650,Food,2024-01-04
+13,Groceries,Supermarket shopping,780,Food,2024-01-05
+14,Book Purchase,Reading book,500,Other,2024-01-05
+15,Coffee,Coffee shop latte,250,Food,2024-01-05
+16,Taxi,Office commute,300,Transport,2024-01-06
+17,Lunch,Team lunch,420,Food,2024-01-06
+18,Snacks,Bakery snacks,110,Food,2024-01-06
+19,Netflix,Streaming subscription,499,Fun,2024-01-07
+20,Petrol,Fuel refill,1400,Transport,2024-01-07
+21,Breakfast,Paratha breakfast,90,Food,2024-01-07
+22,Groceries,Milk and bread,180,Food,2024-01-08
+23,Bus Ticket,Office commute,40,Transport,2024-01-08
+24,Lunch,Office cafeteria,200,Food,2024-01-08
+25,Coffee,Cappuccino,180,Food,2024-01-09
+26,Electricity Bill,Monthly bill,1980,Bills,2024-01-09
+27,Dinner,Restaurant dinner,720,Food,2024-01-09
+28,Groceries,Fruits purchase,300,Food,2024-01-10
+29,Taxi,City travel,250,Transport,2024-01-10
+30,Snacks,Evening snacks,130,Food,2024-01-10
+31,Lunch,Office lunch,210,Food,2024-01-11
+32,Internet Bill,Monthly wifi,999,Bills,2024-01-11
+33,Petrol,Fuel refill,1550,Transport,2024-01-11
+34,Breakfast,Sandwich,140,Food,2024-01-12
+35,Groceries,Supermarket shopping,620,Food,2024-01-12
+36,Movie Ticket,Weekend movie,350,Fun,2024-01-12
+37,Taxi,Airport ride,600,Transport,2024-01-13
+38,Lunch,Office cafeteria,200,Food,2024-01-13
+39,Coffee,Cold coffee,160,Food,2024-01-13
+40,Dinner,Restaurant dinner,700,Food,2024-01-14
+41,Snacks,Biscuits and tea,70,Food,2024-01-14
+42,Petrol,Fuel refill,1450,Transport,2024-01-14
+43,Groceries,Vegetables purchase,410,Food,2024-01-15
+44,Taxi,Office commute,280,Transport,2024-01-15
+45,Lunch,Office lunch,230,Food,2024-01-15
+46,Coffee,Latte,200,Food,2024-01-16
+47,Electricity Bill,Monthly bill,2050,Bills,2024-01-16
+48,Dinner,Restaurant dinner,640,Food,2024-01-16
+49,Groceries,Fruits and milk,290,Food,2024-01-17
+50,Bus Ticket,Office commute,40,Transport,2024-01-17
+51,Snacks,Evening snacks,120,Food,2024-01-17
+52,Lunch,Office cafeteria,210,Food,2024-01-18
+53,Movie,Streaming subscription,499,Fun,2024-01-18
+54,Taxi,City ride,260,Transport,2024-01-18
+55,Coffee,Cappuccino,190,Food,2024-01-19
+56,Groceries,Vegetables and fruits,520,Food,2024-01-19
+57,Petrol,Fuel refill,1500,Transport,2024-01-19
+58,Dinner,Restaurant dinner,690,Food,2024-01-20
+59,Snacks,Bakery snacks,110,Food,2024-01-20
+60,Lunch,Office lunch,220,Food,2024-01-20
+61,Breakfast,Idli breakfast,80,Food,2024-01-21
+62,Taxi,Office commute,300,Transport,2024-01-21
+63,Groceries,Milk purchase,140,Food,2024-01-21
+64,Electricity Bill,Monthly bill,2100,Bills,2024-01-22
+65,Internet Bill,Monthly wifi,999,Bills,2024-01-22
+66,Coffee,Cold brew,220,Food,2024-01-22
+67,Lunch,Office cafeteria,230,Food,2024-01-23
+68,Taxi,City ride,270,Transport,2024-01-23
+69,Snacks,Chips and juice,100,Food,2024-01-23
+70,Dinner,Restaurant dinner,710,Food,2024-01-24
+71,Groceries,Vegetables purchase,430,Food,2024-01-24
+72,Petrol,Fuel refill,1520,Transport,2024-01-24
+73,Breakfast,Sandwich breakfast,130,Food,2024-01-25
+74,Lunch,Office lunch,220,Food,2024-01-25
+75,Taxi,Office commute,290,Transport,2024-01-25
+76,Snacks,Evening snacks,120,Food,2024-01-26
+77,Coffee,Latte coffee,210,Food,2024-01-26
+78,Movie Ticket,Weekend movie,350,Fun,2024-01-26
+79,Groceries,Fruits purchase,310,Food,2024-01-27
+80,Petrol,Fuel refill,1480,Transport,2024-01-27
+81,Lunch,Office cafeteria,210,Food,2024-01-27
+82,Dinner,Restaurant dinner,720,Food,2024-01-28
+83,Snacks,Biscuits and tea,80,Food,2024-01-28
+84,Taxi,Airport ride,620,Transport,2024-01-28
+85,Groceries,Vegetables purchase,420,Food,2024-01-29
+86,Coffee,Cappuccino,200,Food,2024-01-29
+87,Lunch,Office lunch,240,Food,2024-01-29
+88,Electricity Bill,Monthly bill,2150,Bills,2024-01-30
+89,Internet Bill,Monthly wifi,999,Bills,2024-01-30
+90,Taxi,Office commute,300,Transport,2024-01-30
+91,Breakfast,Paratha breakfast,100,Food,2024-01-31
+92,Groceries,Milk and bread,170,Food,2024-01-31
+93,Snacks,Evening snacks,110,Food,2024-01-31
+94,Petrol,Fuel refill,1490,Transport,2024-02-01
+95,Lunch,Office cafeteria,220,Food,2024-02-01
+96,Coffee,Latte,210,Food,2024-02-01
+97,Dinner,Restaurant dinner,700,Food,2024-02-02
+98,Taxi,City ride,260,Transport,2024-02-02
+99,Groceries,Vegetables purchase,450,Food,2024-02-02
+100,Game Purchase,Online game purchase,499,Fun,2024-02-03

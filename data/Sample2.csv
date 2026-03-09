@@ -1,0 +1,16 @@
+id,title,expense_description,amount,category,expense_date
+101,Lunch,Office lunch,-200,Food,2024-02-04
+102,Taxi Ride,Office commute,abc,Transport,2024-02-04
+103,Movie Ticket,Weekend movie,350,Entertainment,2024-02-04
+104,,Missing title,220,Food,2024-02-05
+105,Groceries,Vegetables purchase,450,,2024-02-05
+106,Coffee,Coffee shop latte,150,Food,2024/02/05
+107,Internet Bill,Monthly wifi,999,Bills,2024-13-01
+108,Petrol,Fuel refill,1400,Transport,2024-02-30
+109,Snacks,Evening snacks,,Food,2024-02-06
+110,Lunch,Office lunch,200,Food,
+111,Taxi Ride,Office commute,250,Transport,not-a-date
+112,Dinner,Restaurant dinner,700,Food,2024-02-07
+113,Game Purchase,Online game purchase,500,Fun,2024-02-07
+114,Random Expense,Something random,300,RandomCategory,2024-02-08
+115,Extra Column,Test expense,200,Food,2024-02-08,unexpected
