@@ -19,7 +19,7 @@ def main():
         logger.info(f"Expense inserted successfully:{new_expense}")
         logger.info("Ingestion Complete")
 
-    elif len(sys.argv) >= 2:
+    elif len(sys.argv) >= 2: # run analytics 
         command = sys.argv[1]
         match command:
             case "analytics":
@@ -30,7 +30,7 @@ def main():
                 print("Try again with correct Command: analytics")
                 logger.info("Invalid CLI command")
     else:
-        logger.info("no command recieved")
+        logger.info("No command recieved")
     
 
 if __name__ == "__main__":
