@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import psycopg2
 import time
-from logger import setup_logger
+from app.logger import setup_logger
 
 logger = setup_logger()
 
