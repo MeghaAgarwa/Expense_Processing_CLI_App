@@ -29,12 +29,12 @@ services:
 
   python_app:
     build: .           # This folder should have a Dockerfile 
-    env_file:          # to connect to the database
+    env_file:          # connect to the database
       - .env
     volumes: 
     - ./logs:/app/logs 
     - ./data:/app/data
-    command: python app/main.py
+    command: python -m app.main       # Can add "ingest"/"analytics"/"tests" to automatically run
     depends_on:
       - db
 

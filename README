@@ -1,0 +1,197 @@
+Expense Processing CLI Application
+
+A Python-based CLI application that ingests expense data from CSV files, validates the data, stores it in a PostgreSQL database, and runs SQL-based analytics on the stored dataset.
+
+The project demonstrates data ingestion pipelines, database interaction, Docker-based deployment, and automated testing using pytest.
+
+----------------------------------------------------------------------
+ Application Architecture Overview
+----------------------------------------------------------------------
+ExpenseProcessingCLIApp
+│
+├── app/
+│   ├── main.py                 # CLI entry point
+│   ├── ingestion.py            # CSV ingestion 
+│   ├── multiple_csv_reader.py  # Reads multiple CSV files from folder(data)
+│   ├── analytics_runner.py     # Executes SQL analytics queries(analytics/analytics.sql)
+│   ├── db.py                   # Database connection 
+│   ├── logger.py               # Centralized logging configuration
+│
+├── analytics/
+│   └── analytics_queries.sql   # SQL queries for running analytics
+│
+├── data/
+│   └── Sample1.csv    
+│   └── Sample1.csv             # Folder with multiple CSVs
+│
+├── tests/
+│   └── pytest test cases       # Pytest test cases
+│
+├── logs/
+│   └── log1.log
+│
+├── .env
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── .gitignore
+├── pytest.ini
+├── README
+
+----------------------------------------------------------------------
+Data Flow
+----------------------------------------------------------------------
+The application implements a data pipeline that processes raw CSV data into structured analytics results.
+
+                CSV Files
+                    │
+                    ▼
+                CSV Reader
+        (multiple_csv_reader.py)
+                    │
+                    ▼
+             Data Validation
+            (expense_model.py)
+                    │
+                    ├── Valid rows → Insert into PostgreSQL
+                    │
+                    └── Invalid rows → Logged and skipped
+                    │
+                    ▼
+         Insert into PostgreSQL Database
+              (ingestion.py)
+                    │
+                    ▼
+              SQL Analytics
+            (analytics_runner.py)
+                    │
+                    ▼
+          Query Results Printed to CLI
+                    │
+                    ▼
+                 Pytest 
+
+----------------------------------------------------------------------
+Git workflow explanation
+----------------------------------------------------------------------
+Branch Structure
+main
+ ├── initial setup including CSV ingestion
+ ├── feature/analytics
+ └── feature/pytest-tests
+
+Work Flow:
+
+Initial commit
+
+1. Initialize the project as git repo
+cd ExpenseProcessingCLI
+git .init
+
+2. Stage all files in the project
+ git add .   
+
+3. Check all the files to be pushed to git are staged 
+git status
+
+4. Remove any files that are not to be commited to git
+git restore --staged <file>
+[to remove a file from staged list]
+or
+git rm --cached <file>
+[If not wanted in future commits]
+
+5. Commit the staged files with commit message
+git commit -m "Initial Commit- Implement CSV ingestion module"
+
+6. Create a empty repo in github and copy the repo url
+
+7. Connect local Git repository to a remote repository 
+git remote add origin <repo_url>
+
+8. Mark the current branch as main
+git branch -M main
+
+9. Push the local main branch to the remote repository
+git push -u origin main
+
+To push a new branch: analytics/pytests
+
+1. Create a feature branch
+git checkout -b feature/analytics
+
+2. Stage the changes and commit
+git add .
+git commit -m "Adding Analytics module"
+
+3. Push branch
+git push origin feature/analytics
+
+4. Create Pull request on github
+
+5. Merge the pull request
+
+----------------------------------------------------------------------
+Setup and run instructions (local + docker)
+----------------------------------------------------------------------
+1. Clone the repo
+git clone <repo_url>
+
+2. Add .env file in the project directory with required credentials:
+POSTGRES_HOST=db # change it to localhost when running on local system
+POSTGRES_DB=expenses
+POSTGRES_USER= #userid
+POSTGRES_PASSWORD= #userpassword
+POSTGRES_PORT= #port
+
+3. Install Dependencies
+pip install -r requirements.txt
+
+4. Run on Docker 
+4.1 Build and start containers
+    docker compose up --build -d
+4.2 Run ingestion
+    docker compose run python_app python -m app.main.py -ingest
+4.3 Run analytics
+    docker compose run python_app python -m app.main.py -analytics
+4.4 Run unit tests
+    docker compose run python_app python -m app.main.py -pytest
+----------------------------------------------------------------------
+ 
+Sample outputs of SQL analytics
+----------------------------------------------------------------------
+SELECT SUM(amount) 
+FROM expenses
+
+(Decimal('105606.00'),)
+
+SELECT category,SUM(amount) 
+FROM expenses
+GROUP BY category
+
+('Bills', Decimal('29252.00'))
+('Other', Decimal('1000.00'))
+('Transport', Decimal('32380.00'))
+('Fun', Decimal('6094.00'))
+('Food', Decimal('36880.00'))
+
+SELECT EXTRACT(month from expense_date) AS month_of_year,
+SUM(amount) 
+FROM expenses 
+GROUP BY month_of_year 
+ORDER BY month_of_year
+
+(Decimal('1'), Decimal('95048.00'))
+(Decimal('2'), Decimal('10058.00'))
+(Decimal('3'), Decimal('500.00'))
+
+SELECT *
+FROM expenses
+WHERE amount =(SELECT MAX(amount) FROM expenses)
+ORDER BY expense_date
+
+(91, 'Electricity Bill', 'Monthly bill', Decimal('2150.00'), 'Bills', datetime.date(2024, 1, 30))
+(193, 'Electricity Bill', 'Monthly bill', Decimal('2150.00'), 'Bills', datetime.date(2024, 1, 30))
+
+
+

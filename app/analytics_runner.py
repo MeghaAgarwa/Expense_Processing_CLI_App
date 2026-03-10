@@ -1,6 +1,6 @@
 import logging
-from db import wait_for_db
-from logger import setup_logger
+from app.db import wait_for_db
+from app.logger import setup_logger
 
 logger = logger = setup_logger()
 
