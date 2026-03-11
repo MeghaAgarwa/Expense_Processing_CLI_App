@@ -17,10 +17,10 @@ def run_analytic_queries(file_path,interactive=True):
     
     #read sql queries from file
     with open(file_path, 'r') as sql_file:
-        sql = sql_file.read()
+        sql = sql_file.read() # converts to string
         logger.info("Reading SQL file")
         
-    queries = sql.split(";")
+    queries = sql.split(";") # separate multiple queries
 
     #execute queries after removing unnescessary whitespace
     for query in queries:
