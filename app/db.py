@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 import psycopg2
 import time
-from app.logger import setup_logger
+import logging
 
-logger = setup_logger()
+logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()

@@ -1,9 +1,9 @@
 from datetime import date
 from app.models.expense_model import Expense
 from app.db import wait_for_db
-from app.logger import setup_logger
+import logging
 
-logger = setup_logger()
+logger = logging.getLogger(__name__)
 
 def ingest_CSV(records):
 
