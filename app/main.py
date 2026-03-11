@@ -4,22 +4,17 @@ from app.analytics_runner import run_analytic_queries
 import sys
 import subprocess
 from app.logger import setup_logger
+import logging
 
-logger = setup_logger()
+setup_logger()
+logger = logging.getLogger(__name__)
 
 file_path = "analytics/analytics_queries.sql"
 csv_folder = "data"         # for reading multiple csv files
 
 def main():
-    # if len(sys.argv)== 1: #ingest_CSV
-    #     logger.info("Starting CSV Ingestion")
-    #     csv_folder = "data" 
-    #     records= read_CSV_from_Folder(csv_folder)
-    #     new_expense =ingest_CSV(records)
-    #     logger.info(f"Expense inserted successfully:{new_expense}")
-    #     logger.info("Ingestion Complete")
 
-    if len(sys.argv) >= 2: # run analytics 
+    if len(sys.argv) >= 2:  
         command = sys.argv[1]
         match command:
             case "-ingest":
@@ -39,8 +34,9 @@ def main():
                 logger.info("Running tests")
                 subprocess.run("pytest")
             case _:
-                print("Try again with correct Command: analytics")
-                logger.info("Invalid CLI command")
+                logger.info(f"Invalid CLI command: {command}")
+                print("Try -ingest or -analytics or -tests")
+                
     else:
         logger.info("No command recieved: Try -ingest or -analytics or -tests" )
     
